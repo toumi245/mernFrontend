@@ -24,7 +24,7 @@ export const createOrder = (order)=> async(dispatch,getState) => {
                 Authorization:`Bearer ${userInfo.token}`
             }
         }
-        const {data}= await axios.post(`/api/orders`,order,config)
+        const {data}= await axios.post(`https://mern-commerce-backend-gh8s.onrender.com/api/orders`,order,config)
 
         dispatch({
             type:ORDER_CREATE_SUCCESS,
@@ -53,7 +53,7 @@ export const getOrderDetails = (id)=> async(dispatch,getState) => {
                 Authorization:`Bearer ${userInfo.token}`
             }
         }
-        const {data}= await axios.get(`/api/orders/${id}`,config)
+        const {data}= await axios.get(`https://mern-commerce-backend-gh8s.onrender.com/api/orders/${id}`,config)
 
         dispatch({
             type:ORDER_DETAILS_SUCCESS,
@@ -85,7 +85,7 @@ export const payOrder = (orderId,paymentResults)=> async(dispatch,getState) => {
                 Authorization:`Bearer ${userInfo.token}`
             }
         }
-        const {data}= await axios.put(`/api/orders/${orderId}/pay`,paymentResults,config)
+        const {data}= await axios.put(`https://mern-commerce-backend-gh8s.onrender.com/api/orders/${orderId}/pay`,paymentResults,config)
 
         dispatch({
             type:ORDER_PAY_SUCCESS,
