@@ -1,6 +1,6 @@
 {
   "name": "mern",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://mern-commerce-backend-gh8s.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
